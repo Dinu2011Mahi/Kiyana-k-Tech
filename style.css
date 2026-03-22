@@ -137,6 +137,7 @@ body {
     .nav-container { padding: 14px 25px; }
 }
 
+
 /* Header End */
 
 /* Hero Section Start */
@@ -228,18 +229,94 @@ body {
     }
 }
 
+/* ══ MOBILE RESPONSIVE FIXES ══ */
+
 @media (max-width: 768px) {
-    .hero h1 { font-size: 32px; }
-    .hero p  { font-size: 16px; }
+
+    body {
+        padding-top: 80px;
+    }
+
+    .hero {
+        width: 100%;
+        min-height: 100svh;
+        padding: 100px 20px 60px;
+        background-size: cover;
+        background-position: center center;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hero-content {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 10px;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+        line-height: 1.2;
+        text-align: center;
+    }
+
+    .hero p {
+        font-size: 15px;
+        text-align: center;
+        padding: 0 10px;
+    }
+
+    .hero-buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        width: 100%;
+    }
+
+    .btn-primary,
+    .btn-outline {
+        width: 100%;
+        max-width: 280px;
+        text-align: center;
+        display: block;
+    }
+
+    /* Nav — fix positioning on mobile */
+    .header {
+        top: 10px;
+    }
+
+    .nav-container {
+        width: 92%;
+        padding: 12px 20px;
+    }
+
+    .mobile-menu {
+        width: 92%;
+        top: 72px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    body {
+        padding-top: 70px;
+    }
+
+    .hero h1 {
+        font-size: 26px;
+    }
+
+    .hero {
+        padding: 90px 16px 50px;
+    }
 }
 
 /* Hero Section End */
 
-
-/* ═══════════════════════════════════════════════════════
-   NEW SECTIONS — FULLY REDESIGNED
-   Premium, unique, professional look
-═══════════════════════════════════════════════════════ */
 
 /* ── Scroll Reveal ── */
 .reveal {
