@@ -23,11 +23,11 @@ body {
 /* Header Start */
 .header {
     position: fixed;
-    top: 20px;         
+    top: 20px;
     left: 0;
     width: 100%;
     display: flex;
-    justify-content: center; 
+    justify-content: center;
     z-index: 1000;
 }
 
@@ -41,10 +41,9 @@ body {
     background: var(--nav-bg);
     backdrop-filter: blur(12px);
     border: 1px solid var(--border-color);
-    border-radius: 50px;   
+    border-radius: 50px;
     transition: var(--transition);
 }
-
 
 .logo {
     display: flex;
@@ -61,7 +60,6 @@ body {
     height: 50px;
     object-fit: contain;
     border-radius: 10px;
-    /* removes white background from logo */
     mix-blend-mode: screen;
 }
 
@@ -130,15 +128,6 @@ body {
 .mobile-menu.active {
     max-height: 400px;
 }
-
-@media (max-width: 768px) {
-    .nav-menu { display: none; }
-    .hamburger { display: flex; }
-    .nav-container { padding: 14px 25px; }
-}
-
-
-/* Header End */
 
 /* Hero Section Start */
 .hero {
@@ -229,92 +218,6 @@ body {
     }
 }
 
-/* ══ MOBILE RESPONSIVE FIXES ══ */
-
-@media (max-width: 768px) {
-
-    body {
-        padding-top: 80px;
-    }
-
-    .hero {
-        width: 100%;
-        min-height: 100svh;
-        padding: 100px 20px 60px;
-        background-size: cover;
-        background-position: center center;
-        text-align: center;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .hero-content {
-        width: 100%;
-        max-width: 100%;
-        padding: 0 10px;
-        text-align: center;
-    }
-
-    .hero h1 {
-        font-size: 30px;
-        line-height: 1.2;
-        text-align: center;
-    }
-
-    .hero p {
-        font-size: 15px;
-        text-align: center;
-        padding: 0 10px;
-    }
-
-    .hero-buttons {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 12px;
-        width: 100%;
-    }
-
-    .btn-primary,
-    .btn-outline {
-        width: 100%;
-        max-width: 280px;
-        text-align: center;
-        display: block;
-    }
-
-    /* Nav — fix positioning on mobile */
-    .header {
-        top: 10px;
-    }
-
-    .nav-container {
-        width: 92%;
-        padding: 12px 20px;
-    }
-
-    .mobile-menu {
-        width: 92%;
-        top: 72px;
-    }
-}
-
-@media (max-width: 480px) {
-
-    body {
-        padding-top: 70px;
-    }
-
-    .hero h1 {
-        font-size: 26px;
-    }
-
-    .hero {
-        padding: 90px 16px 50px;
-    }
-}
-
 /* Hero Section End */
 
 
@@ -340,7 +243,6 @@ body {
 
 .orange-color { color: #e07213; }
 
-/* Section label pill */
 .section-tag {
     display: inline-flex;
     align-items: center;
@@ -366,7 +268,6 @@ body {
     flex-shrink: 0;
 }
 
-/* Section header */
 .section-head {
     text-align: center;
     margin-bottom: 58px;
@@ -388,7 +289,6 @@ body {
     line-height: 1.7;
 }
 
-/* Reusable button */
 .btn-full {
     width: 100%;
     text-align: center;
@@ -409,7 +309,6 @@ body {
     overflow: hidden;
 }
 
-/* Subtle grid background */
 .about::before {
     content: '';
     position: absolute;
@@ -477,7 +376,6 @@ body {
     letter-spacing: 0.5px;
 }
 
-/* About right side cards */
 .about-cards { display: flex; flex-direction: column; gap: 12px; }
 
 .acard {
@@ -493,7 +391,6 @@ body {
     overflow: hidden;
 }
 
-/* Glow line on left edge */
 .acard::before {
     content: '';
     position: absolute;
@@ -548,7 +445,6 @@ body {
     position: relative;
 }
 
-/* Radial glow top center */
 .services::before {
     content: '';
     position: absolute;
@@ -577,7 +473,6 @@ body {
     overflow: hidden;
 }
 
-/* Gradient top border */
 .scard::after {
     content: '';
     position: absolute;
@@ -592,9 +487,7 @@ body {
     transform: translateY(-8px);
     border-color: rgba(79,140,255,0.15);
     background: #101010;
-    box-shadow:
-        0 24px 48px rgba(0,0,0,0.5),
-        0 0 0 1px rgba(79,140,255,0.08);
+    box-shadow: 0 24px 48px rgba(0,0,0,0.5), 0 0 0 1px rgba(79,140,255,0.08);
 }
 
 .scard:hover::after { opacity: 1; }
@@ -736,28 +629,17 @@ body {
 .pcard:hover {
     transform: translateY(-8px);
     border-color: rgba(79,140,255,0.2);
-    box-shadow:
-        0 28px 56px rgba(0,0,0,0.5),
-        0 0 0 1px rgba(79,140,255,0.06);
+    box-shadow: 0 28px 56px rgba(0,0,0,0.5), 0 0 0 1px rgba(79,140,255,0.06);
 }
 
 .pcard:hover::before { opacity: 1; }
 
-.pcard-img-wrap {
-    width: 100%;
-    aspect-ratio: 4 / 3;
-    overflow: hidden;
-    background: #080808;
-    position: relative;
-}
-
 .pcard-img {
     width: 100%;
-    height: 100%;
+    aspect-ratio: 4 / 3;
     object-fit: cover;
     display: block;
-    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1),
-                filter 0.6s ease;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), filter 0.6s ease;
     filter: brightness(0.85) saturate(0.9);
 }
 
@@ -846,7 +728,6 @@ body {
     cursor: default;
 }
 
-/* Large faded number */
 .wnum {
     position: absolute;
     bottom: -10px; right: 16px;
@@ -867,7 +748,6 @@ body {
     box-shadow: 0 20px 40px rgba(0,0,0,0.4);
 }
 
-/* Icon box */
 .wicon {
     font-size: 22px;
     width: 50px; height: 50px;
@@ -925,7 +805,6 @@ body {
     overflow: hidden;
 }
 
-/* Giant quote mark */
 .rcard::before {
     content: '"';
     position: absolute;
@@ -1029,7 +908,6 @@ body {
     border: 1px solid #1e1e1e;
 }
 
-/* Animated gradient background */
 .cta-box::before {
     content: '';
     position: absolute;
@@ -1040,7 +918,6 @@ body {
     pointer-events: none;
 }
 
-/* Top border gradient */
 .cta-box::after {
     content: '';
     position: absolute;
@@ -1165,7 +1042,6 @@ body {
     line-height: 1.65;
 }
 
-/* Contact Form */
 .cform {
     background: #0e0e0e;
     border: 1px solid #1a1a1a;
@@ -1235,26 +1111,30 @@ body {
 
 .footer-grid {
     display: grid;
-    grid-template-columns: 1.8fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 48px;
     padding-bottom: 48px;
+    border-bottom: 1px solid #111;
+}
+
+.fbrand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 40px;
+    margin-bottom: 40px;
     border-bottom: 1px solid #111;
 }
 
 .fbrand .logo {
     display: flex;
     align-items: center;
+    justify-content: center;
+    gap: 10px;
     font-size: 18px;
     font-weight: 700;
-    gap: 10px;
     margin-bottom: 14px;
-}
-
-.fbrand{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
 }
 
 .fbrand p {
@@ -1262,9 +1142,14 @@ body {
     color: #3a3a3a;
     line-height: 1.85;
     margin-bottom: 22px;
+    max-width: 400px;
 }
 
-.socials { display: flex; gap: 8px; justify-content: center;}
+.socials {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+}
 
 .socials a {
     width: 36px; height: 36px;
@@ -1319,40 +1204,339 @@ body {
 }
 
 
-/* ══════════════════════════════════════
-   RESPONSIVE
-══════════════════════════════════════ */
+/* ══════════════════════════════════════════════════════
+   RESPONSIVE — TABLET (max-width: 1024px)
+══════════════════════════════════════════════════════ */
 @media (max-width: 1024px) {
-    .services-grid { grid-template-columns: repeat(2, 1fr); }
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .why-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .reviews-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
+
+/* ══════════════════════════════════════════════════════
+   RESPONSIVE — MOBILE (max-width: 768px)
+══════════════════════════════════════════════════════ */
 @media (max-width: 768px) {
-    .section-head h2 { font-size: 28px; }
 
-    .about-grid    { grid-template-columns: 1fr; gap: 40px; }
-    .about-text h2 { font-size: 28px; }
-    .about-stats   { grid-template-columns: repeat(3, 1fr); gap: 1px; }
+    /* ── Body ── */
+    body {
+        padding-top: 72px;
+    }
 
-    .services-grid { grid-template-columns: 1fr; }
+    /* ── Header ── */
+    .header {
+        top: 8px;
+    }
 
-    .products-grid { grid-template-columns: repeat(2, 1fr); }
+    .nav-container {
+        width: 94%;
+        padding: 10px 18px;
+    }
 
-    .why-grid { grid-template-columns: 1fr; }
+    .nav-menu {
+        display: none;
+    }
 
-    .reviews-grid { grid-template-columns: 1fr; }
+    .hamburger {
+        display: flex;
+    }
 
-    .cta-box { padding: 48px 24px; }
-    .cta-box h2 { font-size: 26px; }
+    .mobile-menu {
+        width: 94%;
+        top: 66px;
+    }
 
-    .contact-grid { grid-template-columns: 1fr; gap: 32px; }
-    .cform { padding: 24px; }
+    /* ── Logo ── */
+    .logo {
+        font-size: 15px;
+        gap: 8px;
+    }
 
-    .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
-    .footer-btm  { flex-direction: column; gap: 8px; text-align: center; }
+    .logo-img {
+        width: 32px;
+        height: 32px;
+    }
+
+    /* ── Hero ── */
+    .hero {
+        width: 100%;
+        min-height: 100svh;
+        padding: 80px 20px 50px;
+        background-size: cover;
+        background-position: center center;
+    }
+
+    .hero-content {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 8px;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+        line-height: 1.25;
+    }
+
+    .hero p {
+        font-size: 14px;
+        padding: 0 4px;
+        margin-bottom: 28px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .btn-primary,
+    .btn-outline {
+        width: 100%;
+        max-width: 260px;
+        text-align: center;
+        display: block;
+    }
+
+    /* ── Section shared ── */
+    .section-head {
+        margin-bottom: 36px;
+    }
+
+    .section-head h2 {
+        font-size: 24px;
+        letter-spacing: -0.3px;
+    }
+
+    .section-head p {
+        font-size: 13px;
+    }
+
+    /* ── About ── */
+    .about {
+        padding: 60px 0;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .about-text h2 {
+        font-size: 24px;
+    }
+
+    .about-text p {
+        font-size: 13px;
+    }
+
+    .about-stats > div {
+        padding: 16px 10px;
+    }
+
+    .stat-num {
+        font-size: 22px;
+    }
+
+    .stat-lbl {
+        font-size: 10px;
+    }
+
+    /* ── Services ── */
+    .services {
+        padding: 60px 0;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    /* ── Products ── */
+    .products {
+        padding: 60px 0;
+    }
+
+    .products-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    /* ── Why Us ── */
+    .why {
+        padding: 60px 0;
+    }
+
+    .why-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    /* ── Reviews ── */
+    .reviews {
+        padding: 60px 0;
+    }
+
+    .reviews-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    /* ── CTA ── */
+    .cta {
+        padding: 50px 0;
+    }
+
+    .cta-box {
+        padding: 44px 20px;
+    }
+
+    .cta-box h2 {
+        font-size: 24px;
+    }
+
+    .cta-box p {
+        font-size: 13px;
+    }
+
+    .cta-btns {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn-whatsapp,
+    .cta-btns .btn-primary {
+        width: 100%;
+        max-width: 260px;
+        justify-content: center;
+    }
+
+    /* ── Contact ── */
+    .contact {
+        padding: 60px 0;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .cform {
+        padding: 22px;
+    }
+
+    /* ── Footer ── */
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        text-align: center;
+    }
+
+    .fcol {
+        align-items: center;
+    }
+
+    .fcol a {
+        justify-content: center;
+    }
+
+    .footer-btm {
+        flex-direction: column;
+        gap: 6px;
+        text-align: center;
+    }
 }
 
+
+/* ══════════════════════════════════════════════════════
+   RESPONSIVE — SMALL MOBILE (max-width: 480px)
+══════════════════════════════════════════════════════ */
 @media (max-width: 480px) {
-    .products-grid { grid-template-columns: 1fr; }
-    .footer-grid   { grid-template-columns: 1fr; }
-    .cta-box h2    { font-size: 22px; }
+
+    /* ── Body ── */
+    body {
+        padding-top: 66px;
+    }
+
+    /* ── Header ── */
+    .header {
+        top: 6px;
+    }
+
+    .nav-container {
+        width: 96%;
+        padding: 9px 16px;
+    }
+
+    .mobile-menu {
+        width: 96%;
+        top: 60px;
+    }
+
+    /* ── Logo ── */
+    .logo {
+        font-size: 13px;
+        gap: 7px;
+    }
+
+    .logo-img {
+        width: 28px;
+        height: 28px;
+    }
+
+    /* ── Hero ── */
+    .hero {
+        padding: 70px 14px 44px;
+    }
+
+    .hero h1 {
+        font-size: 23px;
+    }
+
+    .hero p {
+        font-size: 13px;
+    }
+
+    /* ── Section headings ── */
+    .section-head h2 {
+        font-size: 22px;
+    }
+
+    /* ── About stats ── */
+    .about-stats > div {
+        padding: 12px 6px;
+    }
+
+    .stat-num {
+        font-size: 18px;
+    }
+
+    /* ── CTA ── */
+    .cta-box h2 {
+        font-size: 20px;
+    }
+
+    /* ── Contact form ── */
+    .cform {
+        padding: 18px;
+    }
+
+    /* ── Footer ── */
+    .fbrand p {
+        font-size: 12px;
+    }
 }
