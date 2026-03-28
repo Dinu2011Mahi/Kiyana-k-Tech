@@ -18,7 +18,7 @@ body {
     background: var(--bg-dark);
     color: var(--primary-color);
     padding-top: 120px;
-    overflow-x: hidden;          /* FIX: prevent horizontal scroll on mobile */
+    overflow-x: hidden;
 }
 
 /* ══════════════════════════════════════
@@ -57,6 +57,14 @@ body {
     font-size: 20px;
     font-weight: 600;
     letter-spacing: 1px;
+    min-width: 0;
+    flex-shrink: 1;
+}
+
+.logo span {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .logo-img {
@@ -65,6 +73,7 @@ body {
     object-fit: contain;
     border-radius: 10px;
     mix-blend-mode: screen;
+    flex-shrink: 0;
 }
 
 .nav-menu {
@@ -88,6 +97,8 @@ body {
     flex-direction: column;
     gap: 5px;
     cursor: pointer;
+    flex-shrink: 0;
+    margin-left: 12px;
 }
 
 .hamburger span {
@@ -95,6 +106,7 @@ body {
     height: 2px;
     background: var(--primary-color);
     transition: var(--transition);
+    display: block;
 }
 
 .hamburger.active span:nth-child(1) {
@@ -128,6 +140,13 @@ body {
     text-decoration: none;
     color: var(--primary-color);
     border-bottom: 1px solid #1f1f1f;
+    font-size: 14px;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.mobile-menu a:hover {
+    background: #1a1a1a;
+    color: var(--accent-color);
 }
 
 .mobile-menu.active {
@@ -149,7 +168,7 @@ body {
         url("Asset/image/HeroBanner.jpg");
     background-size: cover;
     background-position: center;
-    padding: 80px 20px;              /* FIX: safe padding so content never clips */
+    padding: 80px 20px;
 }
 
 .hero-content {
@@ -158,6 +177,7 @@ body {
     animation: fadeUp 1s ease forwards;
     opacity: 0;
     transform: translateY(30px);
+    padding: 0 24px;
 }
 
 .hero h1 {
@@ -184,7 +204,7 @@ body {
 .hero-buttons {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 16px;
     flex-wrap: wrap;
 }
 
@@ -208,6 +228,8 @@ body {
     transition: var(--transition);
     box-shadow: 0 10px 25px rgba(79,140,255,0.3);
     display: inline-block;
+    text-align: center;
+    white-space: nowrap;
 }
 
 .btn-primary:hover {
@@ -215,7 +237,7 @@ body {
 }
 
 .btn-outline {
-    border: 1px solid var(--border-color);
+    border: 1px solid rgba(255,255,255,0.2);
     color: var(--primary-color);
     padding: 14px 28px;
     border-radius: 50px;
@@ -223,10 +245,13 @@ body {
     font-size: 14px;
     transition: var(--transition);
     display: inline-block;
+    text-align: center;
+    white-space: nowrap;
 }
 
 .btn-outline:hover {
     background: #1a1a1a;
+    border-color: rgba(255,255,255,0.3);
 }
 
 .btn-full {
@@ -253,12 +278,11 @@ body {
 .reveal-delay-4    { transition-delay: 0.32s; }
 
 
-/* ── Shared Utilities ── */
 .container {
     width: 90%;
     max-width: 1180px;
     margin: 0 auto;
-    padding: 0 16px;               /* FIX: edge-safe horizontal padding */
+    padding: 0 16px;
 }
 
 .orange-color { color: #e07213; }
@@ -302,7 +326,6 @@ body {
 }
 
 .section-head p {
-     
     color: var(--text-light);
     font-size: 15px;
     max-width: 500px;
@@ -335,7 +358,7 @@ body {
 .about-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 64px;                       /* FIX: reduced from 72px for better tablet fit */
+    gap: 64px;
     align-items: center;
     position: relative;
 }
@@ -455,6 +478,7 @@ body {
     padding: 110px 0;
     background: #080808;
     position: relative;
+    overflow: hidden;
 }
 
 .services::before {
@@ -577,7 +601,6 @@ body {
     opacity: 0.6;
 }
 
-/* FIX: remove ::after arrow — HTML already contains → in link text */
 .scard-link {
     display: inline-flex;
     align-items: center;
@@ -715,6 +738,7 @@ body {
     padding: 110px 0;
     background: #080808;
     position: relative;
+    overflow: hidden;
 }
 
 .why::before {
@@ -727,7 +751,6 @@ body {
     pointer-events: none;
 }
 
-/* FIX: 5 items in 3-col grid — center-justify orphan last row */
 .why-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -735,7 +758,6 @@ body {
     justify-items: stretch;
 }
 
-/* FIX: last child when it's the 4th or 5th item spans to center it visually */
 .wcard:last-child:nth-child(3n - 1) {
     grid-column: 2 / 3;
 }
@@ -995,6 +1017,7 @@ body {
     font-size: 14px;
     font-weight: 600;
     transition: all 0.3s ease;
+    white-space: nowrap;
 }
 
 .btn-whatsapp:hover {
@@ -1133,7 +1156,6 @@ body {
     padding: 70px 0 0;
 }
 
-/* FIX: was 3-col grid with 4 children → now 4-col to fit all items in one row */
 .footer-grid {
     display: grid;
     grid-template-columns: 1.4fr 1fr 1fr 1fr;
@@ -1148,7 +1170,6 @@ body {
     flex-direction: column;
     align-items: flex-start;
     text-align: left;
-    /* FIX: removed border-bottom & padding-bottom — those were for old layout */
 }
 
 .fbrand .logo {
@@ -1231,14 +1252,13 @@ body {
 ══════════════════════════════════════════════════════ */
 @media (max-width: 1100px) {
 
-    /* Footer: 2 + 2 layout */
     .footer-grid {
         grid-template-columns: 1fr 1fr;
         gap: 32px;
     }
 
     .fbrand {
-        grid-column: 1 / -1;        /* full-width brand row */
+        grid-column: 1 / -1;
         flex-direction: row;
         align-items: flex-start;
         gap: 40px;
@@ -1270,7 +1290,6 @@ body {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    /* FIX: reset the centering hack that only applies to 3-col layout */
     .wcard:last-child:nth-child(3n - 1) {
         grid-column: auto;
     }
@@ -1280,13 +1299,8 @@ body {
     }
 }
 
-
-/* ══════════════════════════════════════════════════════
-   RESPONSIVE — TABLET PORTRAIT / LARGE MOBILE (max-width: 900px)
-══════════════════════════════════════════════════════ */
 @media (max-width: 900px) {
 
-    /* FIX: collapse contact grid earlier so form doesn't get squished */
     .contact-grid {
         grid-template-columns: 1fr;
         gap: 32px;
@@ -1303,6 +1317,34 @@ body {
 
     .section-head h2 {
         font-size: 30px;
+    }
+}
+
+@media (max-width: 640px) {
+
+    .hero h1 {
+        font-size: 32px;
+        line-height: 1.2;
+    }
+
+    .hero p {
+        font-size: 15px;
+        margin-bottom: 28px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .hero-buttons .btn-primary,
+    .hero-buttons .btn-outline {
+        width: 100%;
+        max-width: 300px;
+        display: block;
+        text-align: center;
+        margin: 0 auto;
     }
 }
 
@@ -1324,7 +1366,7 @@ body {
     }
 
     .nav-container {
-        width: 90%;
+        width: 92%;
         padding: 10px 18px;
     }
 
@@ -1337,7 +1379,7 @@ body {
     }
 
     .mobile-menu {
-        width: 94%;
+        width: 92%;
         top: 66px;
     }
 
@@ -1348,8 +1390,8 @@ body {
     }
 
     .logo-img {
-        width: 32px;
-        height: 32px;
+        width: 34px;
+        height: 34px;
     }
 
     /* ── Hero ── */
@@ -1363,7 +1405,7 @@ body {
     .hero-content {
         width: 100%;
         max-width: 100%;
-        padding: 0 8px;
+        padding: 0 12px;
         text-align: center;
     }
 
@@ -1378,18 +1420,10 @@ body {
         margin-bottom: 28px;
     }
 
-    .hero-buttons {
-        flex-direction: column;
-        align-items: center;
-        gap: 12px;
-    }
 
-    .btn-primary,
-    .btn-outline {
-        width: 100%;
+    .hero-buttons .btn-primary,
+    .hero-buttons .btn-outline {
         max-width: 280px;
-        text-align: center;
-        display: block;
     }
 
     /* ── Section shared ── */
@@ -1466,7 +1500,6 @@ body {
         gap: 14px;
     }
 
-    /* Reset grid centering trick on mobile */
     .wcard:last-child:nth-child(3n - 1) {
         grid-column: auto;
     }
@@ -1501,13 +1534,18 @@ body {
     .cta-btns {
         flex-direction: column;
         align-items: center;
+        gap: 12px;
     }
 
-    .btn-whatsapp,
-    .cta-btns .btn-primary {
+
+    .cta-btns .btn-primary,
+    .btn-whatsapp {
         width: 100%;
         max-width: 280px;
         justify-content: center;
+        display: inline-flex;
+        margin: 0 auto;
+        text-align: center;
     }
 
     /* ── Contact ── */
@@ -1585,7 +1623,7 @@ body {
         top: 60px;
     }
 
-    /* ── Logo ── */
+
     .logo {
         font-size: 13px;
         gap: 7px;
@@ -1601,11 +1639,22 @@ body {
         padding: 80px 16px 44px;
     }
 
+    .hero-content {
+        padding: 0 8px;
+    }
+
     .hero h1 {
         font-size: 23px;
     }
 
     .hero p {
+        font-size: 13px;
+    }
+
+    .hero-buttons .btn-primary,
+    .hero-buttons .btn-outline {
+        max-width: 260px;
+        padding: 13px 24px;
         font-size: 13px;
     }
 
@@ -1672,5 +1721,29 @@ body {
     .footer-btm {
         font-size: 11px;
         padding: 20px 0;
+    }
+}
+
+@media (max-width: 360px) {
+
+    
+    .logo span {
+        display: none;
+    }
+
+    .logo-img {
+        width: 32px;
+        height: 32px;
+    }
+
+    .hero h1 {
+        font-size: 20px;
+    }
+
+    .hero-buttons .btn-primary,
+    .hero-buttons .btn-outline {
+        max-width: 240px;
+        padding: 12px 20px;
+        font-size: 13px;
     }
 }
