@@ -8,7 +8,7 @@
     --transition: 0.3s ease;
 }
 
-/* ── Global Reset ── */
+/*   Global Reset   */
 *, *::before, *::after {
     box-sizing: border-box;
 }
@@ -21,9 +21,7 @@ body {
     overflow-x: hidden;
 }
 
-/* ══════════════════════════════════════
-   HEADER
-══════════════════════════════════════ */
+/* HEADER Start */
 .header {
     position: fixed;
     top: 20px;
@@ -154,9 +152,7 @@ body {
 }
 
 
-/* ══════════════════════════════════════
-   HERO SECTION
-══════════════════════════════════════ */
+/* HERO SECTION */
 .hero {
     min-height: 100vh;
     display: flex;
@@ -216,7 +212,7 @@ body {
 }
 
 
-/* ── Buttons ── */
+/*   Buttons   */
 .btn-primary {
     background: linear-gradient(135deg, #4f8cff, #2563eb);
     color: #fff;
@@ -264,7 +260,7 @@ body {
 }
 
 
-/* ── Scroll Reveal ── */
+/*   Scroll Reveal   */
 .reveal {
     opacity: 0;
     transform: translateY(36px);
@@ -334,9 +330,7 @@ body {
 }
 
 
-/* ══════════════════════════════════════
-   ABOUT SECTION
-══════════════════════════════════════ */
+/* ABOUT SECTION */
 .about {
     padding: 110px 0;
     background: #0c0c0c;
@@ -471,9 +465,7 @@ body {
 }
 
 
-/* ══════════════════════════════════════
-   SERVICES SECTION
-══════════════════════════════════════ */
+/* SERVICES SECTION */
 .services {
     padding: 110px 0;
     background: #080808;
@@ -618,9 +610,7 @@ body {
 }
 
 
-/* ══════════════════════════════════════
-   PRODUCTS SECTION
-══════════════════════════════════════ */
+/* PRODUCTS SECTION */
 .products {
     padding: 110px 0;
     background: #0c0c0c;
@@ -731,9 +721,7 @@ body {
 .products-cta { text-align: center; position: relative; z-index: 1; }
 
 
-/* ══════════════════════════════════════
-   WHY CHOOSE US SECTION
-══════════════════════════════════════ */
+/* WHY CHOOSE US SECTION */
 .why {
     padding: 110px 0;
     background: #080808;
@@ -826,9 +814,7 @@ body {
 }
 
 
-/* ══════════════════════════════════════
-   REVIEWS SECTION
-══════════════════════════════════════ */
+/* REVIEWS SECTION */
 .reviews {
     padding: 110px 0;
     background: #0c0c0c;
@@ -935,9 +921,7 @@ body {
 }
 
 
-/* ══════════════════════════════════════
-   CALL TO ACTION SECTION
-══════════════════════════════════════ */
+/* ACTION Button */
 .cta {
     padding: 80px 0;
     background: #080808;
@@ -1027,9 +1011,7 @@ body {
 }
 
 
-/* ══════════════════════════════════════
-   CONTACT SECTION
-══════════════════════════════════════ */
+/* CONTACT SECTION */
 .contact {
     padding: 110px 0;
     background: #0c0c0c;
@@ -1147,9 +1129,7 @@ body {
 }
 
 
-/* ══════════════════════════════════════
-   FOOTER
-══════════════════════════════════════ */
+/* FOOTER */
 .footer {
     background: #060606;
     border-top: 1px solid #111;
@@ -1247,9 +1227,7 @@ body {
 }
 
 
-/* ══════════════════════════════════════════════════════
-   RESPONSIVE — LARGE TABLET (max-width: 1100px)
-══════════════════════════════════════════════════════ */
+/* Responsiveness to (max-width: 1100px) */
 @media (max-width: 1100px) {
 
     .footer-grid {
@@ -1273,9 +1251,7 @@ body {
 }
 
 
-/* ══════════════════════════════════════════════════════
-   RESPONSIVE — TABLET (max-width: 1024px)
-══════════════════════════════════════════════════════ */
+/* Responsiveness to (max-width: 1024px) */
 @media (max-width: 1024px) {
 
     .services-grid {
@@ -1349,17 +1325,15 @@ body {
 }
 
 
-/* ══════════════════════════════════════════════════════
-   RESPONSIVE — MOBILE (max-width: 768px)
-══════════════════════════════════════════════════════ */
+/* Responsiveness to (max-width: 768px) */
 @media (max-width: 768px) {
 
-    /* ── Body ── */
+    /*   Body   */
     body {
         padding-top: 72px;
     }
 
-    /* ── Header ── */
+    /*   Header   */
     .header {
         top: 8px;
         width: 100%;
@@ -1383,7 +1357,7 @@ body {
         top: 66px;
     }
 
-    /* ── Logo ── */
+    /*   Logo   */
     .logo {
         font-size: 15px;
         gap: 8px;
@@ -1394,7 +1368,7 @@ body {
         height: 34px;
     }
 
-    /* ── Hero ── */
+    /*   Hero   */
     .hero {
         min-height: 100svh;
         padding: 100px 20px 50px;
@@ -1426,7 +1400,7 @@ body {
         max-width: 280px;
     }
 
-    /* ── Section shared ── */
+    /*   Section shared   */
     .section-head {
         margin-bottom: 36px;
     }
@@ -1440,7 +1414,7 @@ body {
         font-size: 13px;
     }
 
-    /* ── About ── */
+    /*   About   */
     .about {
         padding: 60px 0;
     }
@@ -1470,7 +1444,7 @@ body {
         font-size: 10px;
     }
 
-    /* ── Services ── */
+    /*   Services   */
     .services {
         padding: 60px 0;
     }
@@ -1480,7 +1454,7 @@ body {
         gap: 20px;
     }
 
-    /* ── Products ── */
+    /*   Products   */
     .products {
         padding: 60px 0;
     }
@@ -1490,7 +1464,7 @@ body {
         gap: 16px;
     }
 
-    /* ── Why Us ── */
+    /*   Why Us   */
     .why {
         padding: 60px 0;
     }
@@ -1504,7 +1478,7 @@ body {
         grid-column: auto;
     }
 
-    /* ── Reviews ── */
+    /*   Reviews   */
     .reviews {
         padding: 60px 0;
     }
@@ -1514,7 +1488,7 @@ body {
         gap: 14px;
     }
 
-    /* ── CTA ── */
+    /*   CTA   */
     .cta {
         padding: 50px 0;
     }
@@ -1548,7 +1522,7 @@ body {
         text-align: center;
     }
 
-    /* ── Contact ── */
+    /*   Contact   */
     .contact {
         padding: 60px 0;
     }
@@ -1557,7 +1531,7 @@ body {
         padding: 24px 20px;
     }
 
-    /* ── Footer ── */
+    /*   Footer   */
     .footer-grid {
         grid-template-columns: 1fr;
         gap: 28px;
@@ -1598,17 +1572,15 @@ body {
 }
 
 
-/* ══════════════════════════════════════════════════════
-   RESPONSIVE — SMALL MOBILE (max-width: 480px)
-══════════════════════════════════════════════════════ */
+/* Responsiveness to (max-width: 480px) */
 @media (max-width: 480px) {
 
-    /* ── Body ── */
+    /*   Body   */
     body {
         padding-top: 66px;
     }
 
-    /* ── Header ── */
+    /*   Header   */
     .header {
         top: 6px;
     }
@@ -1634,7 +1606,7 @@ body {
         height: 28px;
     }
 
-    /* ── Hero ── */
+    /*   Hero   */
     .hero {
         padding: 80px 16px 44px;
     }
@@ -1658,12 +1630,12 @@ body {
         font-size: 13px;
     }
 
-    /* ── Section headings ── */
+    /*   Section headings   */
     .section-head h2 {
         font-size: 22px;
     }
 
-    /* ── About ── */
+    /*   About   */
     .about-stats > div {
         padding: 12px 6px;
     }
@@ -1672,27 +1644,27 @@ body {
         font-size: 18px;
     }
 
-    /* ── Service cards ── */
+    /*   Service cards   */
     .scard {
         padding: 24px 18px 20px;
     }
 
-    /* ── Products ── */
+    /*   Products   */
     .pcard-body {
         padding: 18px 16px 16px;
     }
 
-    /* ── Why cards ── */
+    /*   Why cards   */
     .wcard {
         padding: 24px 20px;
     }
 
-    /* ── Review cards ── */
+    /*   Review cards   */
     .rcard {
         padding: 22px 18px;
     }
 
-    /* ── CTA ── */
+    /*   CTA   */
     .cta-box {
         padding: 36px 18px;
     }
@@ -1701,7 +1673,7 @@ body {
         font-size: 20px;
     }
 
-    /* ── Contact form ── */
+    /*   Contact form   */
     .cform {
         padding: 18px 16px;
     }
@@ -1713,7 +1685,7 @@ body {
         font-size: 13px;
     }
 
-    /* ── Footer ── */
+    /*   Footer   */
     .fbrand p {
         font-size: 12px;
     }
